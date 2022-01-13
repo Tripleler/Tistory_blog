@@ -37,16 +37,16 @@ class CentWidget(QWidget):
     def __init__(self):
         super().__init__()
         self.videothread = VideoThread()
-        base = QPixmap('base.JPG')
+        base = QPixmap('../../icon/base.JPG')
 
         self.lbl_img = QLabel()
         self.lbl_img.setScaledContents(True)
         self.lbl_img.setPixmap(base)
 
         icon_pp = QIcon()
-        icon_pp.addPixmap(QPixmap("./icon/pause.png"), QIcon.Normal, QIcon.On)
-        icon_pp.addPixmap(QPixmap("./icon/play.png"), QIcon.Active, QIcon.Off)
-        icon_pp.addPixmap(QPixmap("./icon/pause.png"), QIcon.Active, QIcon.On)
+        icon_pp.addPixmap(QPixmap("../../icon/pause.png"), QIcon.Normal, QIcon.On)
+        icon_pp.addPixmap(QPixmap("../../icon/play.png"), QIcon.Active, QIcon.Off)
+        icon_pp.addPixmap(QPixmap("../../icon/pause.png"), QIcon.Active, QIcon.On)
 
         self.btn_pp = QPushButton()
         self.btn_pp.setCheckable(True)
