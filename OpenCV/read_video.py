@@ -4,7 +4,7 @@ import cv2
 cap = cv2.VideoCapture('../sample_num/7.mp4')
 
 if not cap.isOpened():
-    print("Camera open failed!")
+    print("Video open failed!")
     sys.exit()
 
 print('Frame width:', round(cap.get(cv2.CAP_PROP_FRAME_WIDTH)))
