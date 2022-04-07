@@ -34,9 +34,3 @@ while True:
     if key == ord('d'):
         val -= 5
 cv2.destroyAllWindows()
-
-
-
-
-cv2.waitKey()
-cv2.destroyAllWindows()
