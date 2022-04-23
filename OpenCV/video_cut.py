@@ -1,7 +1,7 @@
 import sys
 import cv2
 
-cap = cv2.VideoCapture('Raw.mp4')
+cap = cv2.VideoCapture('md.mp4')
 
 if not cap.isOpened():
     print("Video open failed!")
@@ -35,17 +35,17 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 
-cap = cv2.VideoCapture('Raw.mp4')
-out = cv2.VideoWriter('Cut.mp4', cv2.VideoWriter_fourcc(*'mp4v'), fps, (w, h))
-cap.set(cv2.CAP_PROP_POS_FRAMES, 116)
-while True:
-    ret, frame = cap.read()
-    if not ret:
-        break
-    out.write(frame)
-
-cap.release()
-out.release()
-cv2.destroyAllWindows()
-
-print('Edit Finished')
+# cap = cv2.VideoCapture('Raw.mp4')
+# out = cv2.VideoWriter('Cut.mp4', cv2.VideoWriter_fourcc(*'mp4v'), fps, (w, h))
+# cap.set(cv2.CAP_PROP_POS_FRAMES, 116)
+# while True:
+#     ret, frame = cap.read()
+#     if not ret:
+#         break
+#     out.write(frame)
+#
+# cap.release()
+# out.release()
+# cv2.destroyAllWindows()
+#
+# print('Edit Finished')
