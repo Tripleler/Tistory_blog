@@ -1,3 +1,4 @@
+import os
 import sys
 import cv2
 
@@ -11,7 +12,7 @@ print('Frame width:', round(cap.get(cv2.CAP_PROP_FRAME_WIDTH)))
 print('Frame height:', round(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))
 print('FPS:', round(cap.get(cv2.CAP_PROP_FPS)))
 print('Frame count:', round(cap.get(cv2.CAP_PROP_FRAME_COUNT)))
-
+i = 0
 while True:
 
     ret, frame = cap.read()
@@ -27,6 +28,9 @@ while True:
 
     if cv2.waitKey(delay) == 27:
         break
-
+    i += 1
+    if i == 10:
+        os.rename("../sample_num/7.mp4", "../sample_num/77.mp4")
+        # os.remove("../sample_num/7.mp4")
 cap.release()
 cv2.destroyAllWindows()
