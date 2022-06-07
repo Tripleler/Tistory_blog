@@ -46,6 +46,12 @@ class MyApp(QWidget):
         self.setWindowTitle('QSplitter')
         self.show()
 
+    def replace(self, index, pos):
+        splitter = self.splitterbottom if self.sender() == self.splittertop else self.splittertop
+        splitter.blockSignals(True)
+        splitter.moveSplitter(index, pos)
+        splitter.blockSignals(False)
+
 
 app = QApplication(sys.argv)
 ex = MyApp()
